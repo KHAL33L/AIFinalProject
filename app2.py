@@ -6,7 +6,7 @@ import joblib
 import matplotlib.pyplot as plt
 from datetime import datetime, timedelta
 
-
+import os 
 
 # Get the directory of the current script
 current_dir = os.path.dirname(os.path.abspath(__file__))
