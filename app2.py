@@ -16,7 +16,7 @@ gru_model = joblib.load(os.path.join(current_dir, 'gru_model.joblib'))
 scaler = joblib.load(os.path.join(current_dir, 'scaler.joblib'))
 
 # Load dataset
-df = pd.read_csv(os.path.join(current_dir, 'df.csv'))
+df = pd.read_csv(os.path.join(current_dir, 'CFC_traded_sahres_2019_to_date.csv'))
 
 # Load the models and scaler
 #lstm_model = joblib.load('/content/drive/MyDrive/AI Final Project/lstm_model.joblib')
