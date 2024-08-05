@@ -1,7 +1,7 @@
-joblib
-numpy
-scipy
-matplotlib
 streamlit
-scikit-learn
 pandas
+numpy
+joblib
+matplotlib
+scikit-learn
+tensorflow
