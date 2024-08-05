@@ -6,15 +6,27 @@ import joblib
 import matplotlib.pyplot as plt
 from datetime import datetime, timedelta
 
+current_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Load models
+lstm_model = joblib.load(os.path.join(current_dir, 'lstm_model.joblib'))
+gru_model = joblib.load(os.path.join(current_dir, 'gru_model.joblib'))
+
+# Load scaler
+scaler = joblib.load(os.path.join(current_dir, 'scaler.joblib'))
+
+# Load dataset
+df = pd.read_csv(os.path.join(current_dir, 'df.csv'))
+
 # Load the models and scaler
-lstm_model = joblib.load('/content/drive/MyDrive/AI Final Project/lstm_model.joblib')
-gru_model = joblib.load('/content/drive/MyDrive/AI Final Project/gru_model.joblib')
-scaler = joblib.load('/content/drive/MyDrive/AI Final Project/scaler.joblib')
+#lstm_model = joblib.load('/content/drive/MyDrive/AI Final Project/lstm_model.joblib')
+#gru_model = joblib.load('/content/drive/MyDrive/AI Final Project/gru_model.joblib')
+#scaler = joblib.load('/content/drive/MyDrive/AI Final Project/scaler.joblib')
 
 # Load the dataset
-df = pd.read_csv("/content/drive/MyDrive/AI Final Project/CFC_traded_sahres_2019_to_date.csv")
-df['Daily Date'] = pd.to_datetime(df['Daily Date'], format='%d/%m/%Y')
-df = df.sort_values('Daily Date')
+#df = pd.read_csv("/content/drive/MyDrive/AI Final Project/CFC_traded_sahres_2019_to_date.csv")
+#df['Daily Date'] = pd.to_datetime(df['Daily Date'], format='%d/%m/%Y')
+#df = df.sort_values('Daily Date')
 
 # Function to create sequences
 def create_sequences(data, seq_length):
