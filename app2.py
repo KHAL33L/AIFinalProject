@@ -6,17 +6,15 @@ import joblib
 import matplotlib.pyplot as plt
 from datetime import datetime, timedelta
 
-current_dir = os.path.dirname(os.path.abspath(__file__))
-
 # Load models
-lstm_model = joblib.load(os.path.join(current_dir, 'lstm_model.joblib'))
-gru_model = joblib.load(os.path.join(current_dir, 'gru_model.joblib'))
+lstm_model = joblib.load('lstm_model.joblib')
+gru_model = joblib.load('gru_model.joblib')
 
 # Load scaler
-scaler = joblib.load(os.path.join(current_dir, 'scaler.joblib'))
+scaler = joblib.load('scaler.joblib')
 
 # Load dataset
-df = pd.read_csv(os.path.join(current_dir, 'CFC_traded_sahres_2019_to_date.csv'))
+df = pd.read_csv('CFC_traded_sahres_2019_to_date.csv')
 
 # Load the models and scaler
 #lstm_model = joblib.load('/content/drive/MyDrive/AI Final Project/lstm_model.joblib')
