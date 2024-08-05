@@ -1,5 +1,8 @@
 joblib
 numpy
+scipy
 matplotlib
 streamlit
 matplotlib-pyplot
+scikit-learn
+pandas
