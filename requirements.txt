@@ -2,3 +2,4 @@ joblib
 numpy
 matplotlib
 streamlit
+matplotlib-pyplot
